@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD 14)
 #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework CoreAudio")
 #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework AudioToolbox")
 
+#set(CMAKE_C_FLAGS "-U__STRICT_ANSI__ -c -g -Wall -std=c++14")
+#set(CMAKE_CXX_FLAGS "-U__STRICT_ANSI__ -c -g -Wall -std=c++14")
+
 set(MAIN_DIR .)
 set(LIB_DIR ${MAIN_DIR}/lib)
 
@@ -29,26 +32,26 @@ set(PJ_SUFIX unknown-linux-gnu)
 target_link_libraries(pjwebrtc
         stdc++
         opus
-        pjnath-x86_64-${PJ_SUFIX}
-        pjmedia-x86_64-${PJ_SUFIX}
-        pjmedia-videodev-x86_64-${PJ_SUFIX}
-        pjmedia-audiodev-x86_64-${PJ_SUFIX}
-        pjmedia-codec-x86_64-${PJ_SUFIX}
-        pjsip-simple-x86_64-${PJ_SUFIX}
-        pjsip-ua-x86_64-${PJ_SUFIX}
-        pjsip-x86_64-${PJ_SUFIX}
-        pjsua-x86_64-${PJ_SUFIX}
-        pjsua2-x86_64-${PJ_SUFIX}
-        resample-x86_64-${PJ_SUFIX}
-        gsmcodec-x86_64-${PJ_SUFIX}
-        speex-x86_64-${PJ_SUFIX}
-        ilbccodec-x86_64-${PJ_SUFIX}
-        g7221codec-x86_64-${PJ_SUFIX}
-        yuv-x86_64-${PJ_SUFIX}
-        webrtc-x86_64-${PJ_SUFIX}
-        srtp-x86_64-${PJ_SUFIX}
-        pj-x86_64-${PJ_SUFIX}
-        pjlib-util-x86_64-${PJ_SUFIX}
+        pjnath-aarch64-${PJ_SUFIX}
+        pjmedia-aarch64-${PJ_SUFIX}
+        pjmedia-videodev-aarch64-${PJ_SUFIX}
+        pjmedia-audiodev-aarch64-${PJ_SUFIX}
+        pjmedia-codec-aarch64-${PJ_SUFIX}
+        pjsip-simple-aarch64-${PJ_SUFIX}
+        pjsip-ua-aarch64-${PJ_SUFIX}
+        pjsip-aarch64-${PJ_SUFIX}
+        pjsua-aarch64-${PJ_SUFIX}
+        pjsua2-aarch64-${PJ_SUFIX}
+        resample-aarch64-${PJ_SUFIX}
+        gsmcodec-aarch64-${PJ_SUFIX}
+        speex-aarch64-${PJ_SUFIX}
+        ilbccodec-aarch64-${PJ_SUFIX}
+        g7221codec-aarch64-${PJ_SUFIX}
+        yuv-aarch64-${PJ_SUFIX}
+        webrtc-aarch64-${PJ_SUFIX}
+        srtp-aarch64-${PJ_SUFIX}
+        pj-aarch64-${PJ_SUFIX}
+        pjlib-util-aarch64-${PJ_SUFIX}
         )
 
 target_link_libraries(pjwebrtc ssl crypto pthread asound uuid)

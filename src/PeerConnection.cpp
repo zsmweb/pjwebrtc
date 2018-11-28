@@ -178,7 +178,7 @@ namespace webrtc {
       mediaTransport.push_back(MediaTransport{nullptr, nullptr}); // make place for new transport
       auto& transport = mediaTransport[mediaTransport.size()-1];
       status = pjmedia_ice_create3(mediaEndpoint, NULL, 1, &iceTransportConfiguration, &iceCallbacks,
-          PJMEDIA_ICE_RTCP_MUX, (void*)this, &transport.ice);
+          PJMEDIA_TPMED_RTCP_MUX, (void*)this, &transport.ice);
       assert(status == PJ_SUCCESS);
 
 
